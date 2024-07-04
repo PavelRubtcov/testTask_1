@@ -10,13 +10,14 @@ def hello(requeste):
 
 def textGenerator(requeste, text):
 	text = str(text)
-	if text == "favicon.ico":
-		return HttpResponse(f"""
-			<h2>testTask</h2>
-			<p>Ваш текст: {text}</p>
-			""")
-	infoBd = Request(userText = text, dateText = localtime(now()))#создаю объект модели Request
-	infoBd.save()#cохраняю в БД
+	#if text == "favicon.ico":
+	#	return HttpResponse(f"""
+	#		<h2>testTask</h2>
+	#		<p>Ваш текст: {text}</p>
+	#		""")
+	if text!="favicon.ico":
+		infoBd = Request(userText = text, dateText = localtime(now()))#создаю объект модели Request
+		infoBd.save()#cохраняю в БД
 	# задаём параметры для отображения текста и записи видео
 	fps = 24#задаём количество кадров
 	path_to_save = 'C:\django'#путь сохранения видеофаййла
