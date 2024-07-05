@@ -19,7 +19,7 @@ def textGenerator(requeste, text):
 	infoBd.save()#cохраняю в БД
 	# задаём параметры для отображения текста и записи видео
 	fps = 24#задаём количество кадров
-	path_to_save = 'C:\django'#путь сохранения видеофаййла
+	path_to_save = '/content/testTask_1'#путь сохранения видеофаййла
 	video_path = os.path.join(path_to_save, "video" + ".mp4")#соединяет путь с именем файла
 	font_face = cv2.FONT_HERSHEY_TRIPLEX#задание типа шрифта
 	font_scale = 8.0#размер шрифта
